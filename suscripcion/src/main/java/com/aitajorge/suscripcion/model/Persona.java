@@ -17,6 +17,18 @@ public class Persona {
     @Temporal(TemporalType.DATE) // Especifica el tipo de temporalidad (DATE)
     private Date nacimiento; // Agrega el campo de nacimiento de tipo Date
 
+    @ManyToOne
+    @JoinColumn(name = "direccion_id")
+    private Direccion direccion;
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+
     // Getters y setters
     public Long getId() {
         return id;
