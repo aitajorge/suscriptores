@@ -46,4 +46,9 @@ public class DireccionController {
         direccionServicio.eliminarDireccion(id);
         return ResponseEntity.noContent().build();
     }
+
+//    @GetMapping("/listar")
+//    public List<Direccion> listarDirecciones() {
+//        return direccionServicio.buscarTodasDirecciones();
+//    }
 }
